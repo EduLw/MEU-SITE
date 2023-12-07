@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Vendas</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      background: url('OIP.jpeg')  center fixed;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    label {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #relatorio {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #ffc107;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+      text-align: left;
+    }
+
+    #graficoVendas {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Relatório de Vendas</h1>
+
+    <label for="dataInicio">Data de Início:</label>
+    <input type="date" id="dataInicio">
+
+    <label for="dataFim">Data de Fim:</label>
+    <input type="date" id="dataFim">
+
+    <button onclick="gerarRelatorio()">Gerar Relatório</button>
+
+    <div id="relatorio"></div>
+    <canvas id="graficoVendas" width="400" height="200"></canvas>
+  </div>
+  <p><a href="crontrole.html" >Voltar</a></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    function gerarRelatorio() {
+      var dataInicio = document.getElementById("dataInicio").value;
+      var dataFim = document.getElementById("dataFim").value;
+
+      // Simulando dados de vendas para o exemplo
+      var dadosVendas = [20, 30, 40, 10, 50];
+
+      // Configurando o gráfico
+      var ctx = document.getElementById('graficoVendas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Refrigerantes', 'Sucos', 'Cervejas', 'Cachaça', 'Água'],
+          datasets: [{
+            label: 'Vendas',
+            data: dadosVendas,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+
+      // Construindo o HTML do relatório
+      var relatorioHtml = `
+        <h2>Relatório de Vendas para o período de ${dataInicio} a ${dataFim}</h2>
+        <canvas id="graficoVendas" width="400" height="200"></canvas>
+        <p>Outros dados e informações relevantes aqui...</p>
+      `;
+
+      document.getElementById("relatorio").innerHTML = relatorioHtml;
+    }
+    
+  </script>
+
+</body>
+</html>

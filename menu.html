@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery de Bebidas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('copo.jpeg')  center fixed;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      
+      
+    }
+
+    header {
+      background-color: #fbf8f8;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      background: transparent;
+     
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .produto {
+      background-color: rgb(171, 170, 170);
+      border: 2px solid #090909;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(52, 112, 30, 0.1);
+      margin: 70px;
+      padding: 15px;
+      width: 200px;
+      font-size: 20px;
+     
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      
+      
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+     
+    }
+
+    footer  {
+      background-color: #f6eeee;
+      color: white;
+      text-align: center;
+      padding: 1px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: transparent;
+    }
+
+    h2{
+
+      text-align: center;
+      background-color: #b1b4b1;
+      color: white;
+      padding: 5px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+     
+  
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The drink bar</h1>
+    <p> <a href="login1.html">Voltar a tela de login</a></p>
+  </header>
+
+  <section>
+    <div class="produto">
+      <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+     <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+    </div>
+
+    <div class="produto">
+        <img src="soda.jpeg" alt="Soda Limonada Antarctica">
+      <h3>Soda Limonada Antarctica</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Soda Limonada Antarctica', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+    </div>
+
+    <div class="produto">
+        <img src="guarana.jpeg" alt="Guaraná Antarctica">
+      <h3>Guaraná Antarctica</h3>
+      <p>R$ 4,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Guaraná Antarctica', 4.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="pop laranja.jpeg" alt="Pop Laranja">
+      <h3>Pop Laranja</h3>
+      <p>R$ 4,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Pop Laranja', 4.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="coca light.jpeg" alt="Coca-Cola Light">
+      <h3>Coca-Cola light</h3>
+      <p>R$ 6,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola Light', 6.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="coca zero.jpeg" alt="Coca Zero">
+      <h3>Coca Zero</h3>
+      <p>R$ 6,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca Zero', 6.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="sprite.jpeg" alt="Sprite">
+      <h3>Sprite</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Sprite', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="kuat.jpeg" alt="Kuat">
+      <h3>Kuat</h3>
+      <p>R$ 4,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Kuat', 4.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-laranja.jpg" alt="Suco de laranja">
+      <h3>Suco de laranja</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de laranja', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-uva.jpg" alt="Suco de uva">
+      <h3>Suco de uva</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de uva', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-maracuja.jpg" alt="Suco de maracujá">
+      <h3>Suco de maracujá</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de maracujá', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-maca.jpg" alt="Suco de maçã">
+      <h3>Suco de maçã</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de maçã', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-manga.jpg" alt="Suco de manga">
+      <h3>Suco de manga</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de manga', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-morango.jpg" alt="Suco de morango">
+      <h3>Suco de morango</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de morango', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-melancia.jpg" alt="Suco de melancia">
+      <h3>Suco de melancia</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de melancia', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-acerola.jpg" alt="Suco de acerola">
+      <h3>Suco de acerola</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de acerola', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-cremoso-graviola.jpg" alt="Suco cremoso de graviola">
+      <h3>Suco cremoso de graviola</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco cremoso de graviola', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-natural-cupuacu.jpg" alt="Suco cremoso de cupuaçu">
+      <h3>Suco cremoso de cupuaçu</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco cremoso de cupuaçu', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="limonada-suica.jpg" alt="Limonada suíça">
+      <h3>Limonada suíça</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Limonada suíça', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+      <h2> <a href="estorno.html" >Estorno</a></h2>
+      <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="bebida-pink-lemonade.jpg" alt="Pink lemonade">
+      <h3>Pink lemonade</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Pink lemonade', 7.00)">Comprar</button><br>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-frutas-vermelhas.jpg" alt="Suco de frutas vermelhas">
+      <h3>Suco de frutas vermelhas</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de frutas vermelhas', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-abacaxi-hortela.jpg" alt="Suco de abacaxi com hortelã">
+      <h3>Suco de abacaxi com hortelã</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco de abacaxi com hortelã', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="suco-verde-detox.jpg" alt="Suco verde ou detox">
+      <h3>Suco verde ou detox</h3>
+      <p>R$ 7,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Suco verde ou detox', 7.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+    <div class="produto">
+        <img src="COca.jpeg" alt="Coca-Cola">
+      <h3>Coca-Cola</h3>
+      <p>R$ 5,00 por unidade</p>
+      <p>Quantidade em estoque: 20</p>
+      <button onclick="comprarBebida('Coca-Cola', 5.00)">Comprar</button>
+      <h2> <a href="pagar.html" >Pagar</a></h2>
+     <h2> <a href="estorno.html" >Estorno</a></h2>
+     <h2> <a href="cancelar.html" >Cancelar</a></h2>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Adicione mais produtos conforme necessário -->
+  </section>
+
+  <footer>
+    <p>Preços em reais (R$). Os preços podem estar sujeitos a alterações.</p>
+  </footer>
+
+  <script>
+    function comprarBebida(nome, preco) {
+      var quantidade = prompt("Quantidade desejada:");
+      if (quantidade !== null && !isNaN(quantidade) && quantidade > 0) {
+        var total = quantidade * preco;
+        alert("Compra realizada!\nTotal: R$ " + total.toFixed(2));
+      } else {
+        alert("Quantidade inválida.");
+      }
+    }
+  </script>
+
+</body>
+</html>

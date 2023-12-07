@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Estorno</title>
+    <!-- Adicione o link para o Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        body{
+            background: url('OIP.jpeg')  center fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center">Formulário de Estorno</h1>
+            </div>
+            <div class="card-body">
+                <form id="estornoForm" action="processa_estorno.php" method="post">
+                    <div class="mb-3">
+                        <label for="name_pedido" class="form-label">Nome do Pedido:</label>
+                        <input type="text" class="form-control" name="name_pedido" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="motivo_estorno" class="form-label">Motivo do Estorno:</label>
+                        <textarea class="form-control" name="motivo_estorno" required></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" onclick="solicitarEstorno()">Solicitar Estorno</button>
+                    </div>
+                </form>
+
+                <div id="mensagemEstorno" class="mt-3 hidden">
+                    <div class="alert alert-success" role="alert">
+                        Logo será reembolsado seu dinheiro. Obrigado!
+                        <p><a href="menu.html" >Voltar ao menu</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicione o link para o Bootstrap JS e Popper.js (necessários para alguns componentes do Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function solicitarEstorno() {
+            // Aqui você pode adicionar lógica adicional, se necessário, antes de mostrar a mensagem
+            document.getElementById('estornoForm').style.display = 'none';
+            document.getElementById('mensagemEstorno').style.display = 'block';
+        }
+    </script>
+    
+</body>
+</html>

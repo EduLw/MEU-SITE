@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Drink Bar - Login</title>
+    <style>
+        body {
+            margin: 0px;;
+            padding: 0px;
+            font-family: Arial, sans-serif;
+            background: url('OIP.jpeg')  center fixed;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.7);
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255,0.5);
+            padding: 100px;
+            border-radius: 80px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            height: 550px;
+        }
+
+        .login-container h1 h2 {
+            margin-bottom: 40px;
+            font-size: 45px;
+            
+           
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 0%;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+
+        .login-container button, .login-container a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 88%;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+            position: relative;
+            font-size: 20px;
+            
+        }
+
+        .login-container button:hover, .login-container a:hover {
+            background-color: #45a049;
+        }
+
+        .register-link {
+            margin-top: 300px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(172, 169, 169);">
+    <div class="login-container">
+        <h1>The Drink Bar</h1>
+        <h2> Gerente</h2>
+        <form onsubmit="validateLogin(event)">
+            <label for="nome"></label>
+        <input type="text" id="nome" name="nome" required placeholder="Nome" >
+
+        <br>
+
+
+        <label for="senha"></label>
+        <input type="password" id="senha" name="senha" required  placeholder="Senha">
+            
+            
+
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+        
+        
+        
+    </div>
+
+    <script>
+        function validateLogin() {
+            event.preventDefault();
+
+            var usuario = "Gerente123";
+            var senhaCorrata = "123senha";
+
+            var nomeDigitado = document.getElementById("nome").value;
+            var senhaDigitada = document.getElementById("senha").value;
+
+            // Recupera os dados armazenados localmente (simulação, não seguro para produção)
+           
+            // Simula a validação do login
+            if (nomeDigitado === usuario && senhaDigitada === senhaCorrata) {
+                alert('Login bem-sucedido!');
+                window.location.href ='crontrole.html';
+            } else {
+                alert('nome ou senha incorretos. Tente novamente.');
+            }
+        }
+    </script>
+      </script>
+
+
+    
+    
+</body>
+</html>
